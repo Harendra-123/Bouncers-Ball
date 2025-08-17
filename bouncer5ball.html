@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
+  <title>Bouncer</title>
+</head>
+<style>
+body {
+        background:aqua;
+    }
+
+    .container{
+        text-align: center;
+        margin-top: 25%;
+    }
+
+    .circle:nth-child(1),
+    .circle:nth-child(2),
+    .circle:nth-child(3),
+    .circle:nth-child(4),
+    .circle:nth-child(5) {
+        width:30px;
+        height:30px;
+        border-radius: 2em;
+        display:inline-flex;
+        animation: Bounce 1s ease-in infinite;
+    }
+
+    .circle:nth-child(1){
+        background:red;
+    }
+    .circle:nth-child(2){
+        background: lightblue;
+        animation-delay: .15s;
+    }
+    .circle:nth-child(3){
+        background: blue;
+        animation-delay: .25s;
+    }
+    .circle:nth-child(4){
+        background: lightgreen;
+        animation-delay: .35s;
+    }
+    .circle:nth-child(5){
+        background: green;
+        animation-delay: .45s;
+    }
+
+.panel{
+        width: 300px;
+        height: 2px;
+        border-radius: 2em;
+        background: red;
+  
+        margin:150px 30px;
+}
+
+@keyframes Bounce{
+    0%{
+        transform: translatey(0px);
+    }
+    50%{
+        transform: translatey(155px);
+    }
+    100%{
+        transform: translatey(0px);
+    }
+}
+
+
+</style>
+<body>
+ <div class="container">
+
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+
+        <div class="panel"></div>
+
+    </div>
+</body>
+</html>
