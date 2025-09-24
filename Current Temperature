@@ -1,0 +1,50 @@
+From: <Saved by Blink>
+Snapshot-Content-Location: http://iGhfivRV3l8s3Oo:fuxNnnchRZk8NFl@localhost:54248/storage/emulated/0/Harendra/check%20Current%20Temperature%20.html
+Subject: Current Temperature
+Date: Wed, 24 Sep 2025 08:58:53 +0530
+MIME-Version: 1.0
+Content-Type: multipart/related;
+	type="text/html";
+	boundary="----MultipartBoundary--K3dZkkwKMgVgwkBqKkS4ZAH6WQLudUgUXumyiE5oao----"
+
+
+------MultipartBoundary--K3dZkkwKMgVgwkBqKkS4ZAH6WQLudUgUXumyiE5oao----
+Content-Type: text/html
+Content-ID: <frame-77EAB061B1EA6B9F01F6F173FBD2EAED@mhtml.blink>
+Content-Transfer-Encoding: binary
+Content-Location: http://iGhfivRV3l8s3Oo:fuxNnnchRZk8NFl@localhost:54248/storage/emulated/0/Harendra/check%20Current%20Temperature%20.html
+
+<!DOCTYPE html><html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252"><link rel="stylesheet" type="text/css" href="cid:css-253ee25a-5434-4ff5-a710-7d2d5eef9216@mhtml.blink" />
+  <title>Current Temperature</title>
+  
+</head>
+<body>
+
+  <h2>Check Current Temperature</h2>
+  <input type="text" id="cityInput" placeholder="Enter city, e.g., Bhopal,IN">
+  <button>Get Temperature</button>
+
+  <div id="weather">Temperature will appear here...</div>
+
+  
+
+
+
+</body></html>
+------MultipartBoundary--K3dZkkwKMgVgwkBqKkS4ZAH6WQLudUgUXumyiE5oao----
+Content-Type: text/css
+Content-Transfer-Encoding: binary
+Content-Location: cid:css-253ee25a-5434-4ff5-a710-7d2d5eef9216@mhtml.blink
+
+@charset "windows-1252";
+
+body { font-family: Arial, sans-serif; display: flex; flex-direction: column; justify-content: center; align-items: center; height: 100vh; background: lightblue; }
+
+#weather { padding: 20px 40px; background: rgb(135, 206, 235); border-radius: 12px; color: white; font-size: 24px; text-align: center; box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 10px; margin-top: 20px; white-space: pre-line; }
+
+input, button { padding: 10px 15px; font-size: 18px; margin: 5px; border-radius: 8px; border: 1px solid rgb(204, 204, 204); }
+
+button { background-color: rgb(70, 130, 180); color: white; cursor: pointer; }
+
+button:hover { background-color: rgb(90, 155, 212); }
+------MultipartBoundary--K3dZkkwKMgVgwkBqKkS4ZAH6WQLudUgUXumyiE5oao------
