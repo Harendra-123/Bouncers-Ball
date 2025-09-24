@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Current Temperature</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: lightblue;
+    }
+    #weather {
+      padding: 20px 40px;
+      background: #87ceeb;
+      border-radius: 12px;
+      color: white;
+      font-size: 24px;
+      text-align: center;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      margin-top: 20px;
+      white-space:pre-line;
+    }
+    input, button {
+      padding: 10px 15px;
+      font-size: 18px;
+      margin: 5px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+    }
+    button {
+      background-color: #4682b4;
+      color: white;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #5a9bd4;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Check Current Temperature</h2>
+  <input type="text" id="cityInput" placeholder="Enter city, e.g., Bhopal,IN">
+  <button onclick="getCurrentTemp()">Get Temperature</button>
+
+  <div id="weather">Temperature will appear here...</div>
+
+  <script>
+    const apiKey = "758d39d1a7b11255a64d4c47d16db65e"; // Tumhari API key
+
+    async function getCurrentTemp() {
+      const city = document.getElementById("cityInput").value;
+      if (!city) {
+        alert("Please enter a city!");
+        return;
+      }
+
+      const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}`;
+
+      try {
+        const resp = await fetch(url);
+        const data = await resp.json();
+
+        if (data.cod !== 200) {
+          document.getElementById("weather").innerText = `Error: ${data.message}`;
+          return;
+        }
+
+        document.getElementById("weather").innerText =
+          `City: ${data.name}\nTemperature: ${data.main.temp} °C\nCondition: ${data.weather[0].description}`;
+      } catch (error) {
+        document.getElementById("weather").innerText = "Error fetching data!";
+        console.error(error);
+      }
+    }
+  </script>
+
+</body>
+  </html>
+  
